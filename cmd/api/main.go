@@ -6,7 +6,7 @@ import (
 
 func main() {
 	cfg := config{
-		addr: ":8080",
+		addr: env.getString("ADDR", "8080"),
 	}
 
 	app := &application{
